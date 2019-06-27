@@ -1,3 +1,3 @@
 #!/bin/bash
 
-tr ' ' '\n' | sort | uniq -c | sort -n
+tr [:punct:] ' ' | tr -s ' ' '\n' | tr [:upper:] [:lower:] | sort | uniq -c | sort -n
